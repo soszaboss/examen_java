@@ -415,7 +415,7 @@ public class dashboardController implements Initializable {
         }
     }
 
-    public void homeDisplayTotalRoutes() {
+    public void homeDisplayTotalRoute() {
         String sql = "SELECT COUNT(id) FROM trajets";
         Connection connect = MyJdbc.conn();
 
