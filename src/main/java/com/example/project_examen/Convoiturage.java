@@ -19,7 +19,6 @@ public class Convoiturage extends Application {
     public void start(Stage stage) throws IOException, IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("login.fxml")));
         Scene scene = new Scene(root);
-//        LETS DESIGN IT USING CSS : )
 
         root.setOnMousePressed((MouseEvent event) ->{
             x = event.getSceneX();
