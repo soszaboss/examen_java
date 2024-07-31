@@ -55,22 +55,22 @@
                                 <children>
                                     <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="69.0" layoutY="100.0" size="7em" text="" />
                                     <Line endX="85.0" layoutX="109.0" layoutY="173.0" startX="-100.0" stroke="WHITE" />
-                                    <Button fx:id="home_btn" layoutX="12.0" layoutY="211.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Home">
+                                    <Button fx:id="home_btn" layoutX="12.0" layoutY="211.0" mnemonicParsing="false" onAction="#switchFormEvent" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Home">
                                         <graphic>
                                             <FontAwesomeIcon fill="WHITE" glyphName="HOME" size="1.5em" />
                                         </graphic>
                                     </Button>
-                                    <Button fx:id="userWindow" layoutX="12.0" layoutY="246.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Users">
+                                    <Button fx:id="userWindow" layoutX="12.0" layoutY="246.0" mnemonicParsing="false" onAction="#switchFormEvent" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Users">
                                         <graphic>
                                             <FontAwesomeIcon fill="WHITE" glyphName="USER" size="1.5em" />
                                         </graphic>
                                     </Button>
-                                    <Button fx:id="carrWindow" layoutX="12.0" layoutY="281.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Car">
+                                    <Button fx:id="carrWindow" layoutX="12.0" layoutY="281.0" mnemonicParsing="false" onAction="#switchFormEvent" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Car">
                                         <graphic>
                                             <FontAwesomeIcon fill="WHITE" glyphName="CAR" size="1.5em" />
                                         </graphic>
                                     </Button>
-                                    <Button fx:id="routeWindow" layoutX="12.0" layoutY="316.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Route">
+                                    <Button fx:id="routeWindow" layoutX="12.0" layoutY="316.0" mnemonicParsing="false" onAction="#switchFormEvent" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Route">
                                         <graphic>
                                             <FontAwesomeIcon fill="WHITE" glyphName="ROAD" size="1.5em" />
                                         </graphic>
@@ -192,9 +192,9 @@
                                                     <String fx:value="shadow" />
                                                 </styleClass>
                                                 <children>
-                                                    <TextField fx:id="users_bar_search" layoutX="14.0" layoutY="14.0" onKeyTyped="#addStudentsSearch" prefHeight="30.0" prefWidth="835.0" promptText="Search" styleClass="search" stylesheets="@dashboardDesign.css" />
+                                                    <TextField fx:id="users_bar_search" layoutX="14.0" layoutY="14.0" prefHeight="30.0" prefWidth="835.0" promptText="Search" styleClass="search" stylesheets="@dashboardDesign.css" />
                                                     <FontAwesomeIcon fill="#727272" glyphName="SEARCH" layoutX="21.0" layoutY="35.0" size="1.5em" />
-                                                    <TableView fx:id="user_table" layoutX="13.0" layoutY="56.0" onMouseClicked="#addStudentsSelect" prefHeight="192.0" prefWidth="845.0">
+                                                    <TableView fx:id="user_table" layoutX="13.0" layoutY="56.0" onMouseClicked="#addUsersSelect" prefHeight="192.0" prefWidth="845.0">
                                                         <columns>
                                                             <TableColumn fx:id="user_table_col_id" prefWidth="75.0" text="#ID" />
                                                             <TableColumn fx:id="user_table_col_username" prefWidth="250.0" text="Username" />
@@ -222,10 +222,9 @@
                                                 </font>
                                             </Label>
                                             <ComboBox fx:id="role_combo_box" layoutX="105.0" layoutY="351.0" prefHeight="25.0" prefWidth="166.0" promptText="Choose" styleClass="textfield" stylesheets="@dashboardDesign.css" />
-                                            <Button fx:id="userAddBtn" layoutX="765.0" layoutY="480.0" mnemonicParsing="false" onAction="#addUser" prefHeight="35.0" prefWidth="85.0" styleClass="add-btn" stylesheets="@dashboardDesign.css" text="Add" />
-                                            <Button fx:id="userUpdateBtn" layoutX="669.0" layoutY="480.0" mnemonicParsing="false" onAction="#updateUser" prefHeight="35.0" prefWidth="85.0" styleClass="update-btn" stylesheets="@dashboardDesign.css" text="Update" />
-                                            <Button fx:id="userDeleteBtn" layoutX="546.0" layoutY="480.0" mnemonicParsing="false" onAction="#deleteUser" prefHeight="35.0" prefWidth="85.0" styleClass="delete-btn" stylesheets="@dashboardDesign.css" text="Delete" />
-                                            <Button fx:id="userClearBtn" layoutX="450.0" layoutY="480.0" mnemonicParsing="false" onAction="#clearUser" prefHeight="35.0" prefWidth="85.0" styleClass="clear-btn" stylesheets="@dashboardDesign.css" text="Clear" />
+                                            <Button fx:id="userUpdateBtn" layoutX="747.0" layoutY="480.0" mnemonicParsing="false" onAction="#updateUser" prefHeight="35.0" prefWidth="85.0" styleClass="update-btn" stylesheets="@dashboardDesign.css" text="Update" />
+                                            <Button fx:id="userDeleteBtn" layoutX="622.0" layoutY="480.0" mnemonicParsing="false" onAction="#deleteUser" prefHeight="35.0" prefWidth="85.0" styleClass="delete-btn" stylesheets="@dashboardDesign.css" text="Delete" />
+                                            <Button fx:id="userClearBtn" layoutX="496.0" layoutY="480.0" mnemonicParsing="false" onAction="#clearUser" prefHeight="35.0" prefWidth="85.0" styleClass="clear-btn" stylesheets="@dashboardDesign.css" text="Clear" />
                                         </children>
                                     </AnchorPane>
                                 </children>
@@ -268,7 +267,7 @@
                                             <String fx:value="white-bg" />
                                         </styleClass>
                                         <children>
-                                            <TableView fx:id="voiture_table" layoutX="11.0" layoutY="13.0" onMouseClicked="#availableCourseSelect" prefHeight="490.0" prefWidth="557.0">
+                                            <TableView fx:id="voiture_table" layoutX="11.0" layoutY="13.0" onMouseClicked="#addCarssSelect" prefHeight="490.0" prefWidth="557.0">
                                                 <columns>
                                                     <TableColumn fx:id="voiture_table_col_marque" prefWidth="167.0" text="Marque" />
                                                     <TableColumn fx:id="voiture_table_col_modele" prefWidth="214.0" text="Modèle" />
@@ -283,7 +282,7 @@
                                 <children>
                                     <AnchorPane fx:id="date_depart" layoutY="-4.0" prefHeight="559.0" prefWidth="897.0" stylesheets="@dashboardDesign.css">
                                         <children>
-                                            <TableView fx:id="table_route" layoutX="-1.0" layoutY="52.0" onMouseClicked="#studentGradesSelect" prefHeight="301.0" prefWidth="898.0">
+                                            <TableView fx:id="table_route" layoutX="-1.0" layoutY="52.0" prefHeight="301.0" prefWidth="898.0">
                                                 <columns>
                                                     <TableColumn fx:id="table_route_col_conducteur" prefWidth="181.0" text="Conducteur" />
                                                     <TableColumn fx:id="table_route_col_car" prefWidth="159.0" text="Voiture" />
@@ -293,7 +292,7 @@
                                                     <TableColumn fx:id="table_route_col_date_arrivee" prefWidth="129.0" text="Date d'arrivée" />
                                                 </columns>
                                             </TableView>
-                                            <TextField fx:id="route_search" layoutX="39.0" layoutY="13.0" onKeyTyped="#studentGradesSearch" prefHeight="30.0" prefWidth="798.0" promptText="Search" styleClass="search" stylesheets="@dashboardDesign.css" />
+                                            <TextField fx:id="route_search" layoutX="39.0" layoutY="13.0" prefHeight="30.0" prefWidth="798.0" promptText="Search" styleClass="search" stylesheets="@dashboardDesign.css" />
                                             <FontAwesomeIcon glyphName="SEARCH" layoutX="47.0" layoutY="35.0" size="1.5em" />
                                             <Button fx:id="trajetUpdateBtn" layoutX="667.0" layoutY="481.0" mnemonicParsing="false" onAction="#trajetUpdate" prefHeight="40.0" prefWidth="93.0" styleClass="update-btn" stylesheets="@dashboardDesign.css" text="Update" />
                                             <Button fx:id="trajetClearBtn" layoutX="556.0" layoutY="481.0" mnemonicParsing="false" onAction="#trajetClear" prefHeight="40.0" prefWidth="93.0" styleClass="clear-btn" stylesheets="@dashboardDesign.css" text="Clear" />
