@@ -10,7 +10,6 @@ import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.util.Objects;
-
 public class Convoiturage extends Application {
     private double x = 0 ;
     private double y = 0;
